@@ -5,9 +5,9 @@ Scripts (Python Jupyter notebooks) and DNA sequences associated with the 2021 pa
 ## List of files:
 
 ### Notebooks
-./notebooks/CONKAT-seq_PAC_localization.ipynb - Detect, dereplicate and localize BGCs contained in an arrayed PAC library.
+```./notebooks/CONKAT-seq_PAC_localization.ipynb``` - Detect, dereplicate and localize BGCs contained in an arrayed PAC library.
 
-./notebooks/nanopore_processing.ipynb - Perform de-novo assembly of PAC inserts from Nanopore reads.
+```./notebooks/nanopore_processing.ipynb``` - Perform de-novo assembly of PAC inserts from Nanopore reads.
 
 ### Graph : Predicted domain networks in the library
 graphml file visualized with Cytoscape in Figure 2C
