@@ -21,7 +21,16 @@ fasta file of the 70 BGCs mobilized into heterologous hosts and antismash analys
 ## Analysis scripts:
 ### CONKAT-seq_PAC_localization.ipynb
 Generates networks of biosynthetic domains and track their physical location in the PAC library
-input : demultiplexed AD/KS reads from 1) genomes 2) plate_pools 3) well_pools
+
+
+#### How it works:
+input : demultiplexed AD/KS reads from A) genomes B) plate_pools C) well_pools
+1) cluster amplicons into OTUs with vsearch (trim primer sequence and truncate reads to 200bp, dereplicate reads within in pool, sort by read count, call OTUs accross all pools)
+2) filter OTUs (removing sequences with read count smaller than 3. For each cluster, also removes sequences with low read counts (<5%) relative to the maximum read count of a sequence in the cluster)
+3) localize positions of OTUs in the library
+4) evaluate co-occurrences and connect domains into networks (evaluate co-occurrences between biosynthetic domains in each category of pools, apply threshold on pvalue and generate graph, cleanup graph from fragile nodes/edges)
+5) Annotate nodes with pblast - measure identity to known BGCs ( Extract protein sequences from reference BGCs, blastp translated domains in the graph, annotate graph file)
+
 output : graphml file
 
 ### nanopore_processing.ipynb
