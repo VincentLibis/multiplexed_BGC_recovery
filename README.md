@@ -15,6 +15,7 @@ graphml file visualized with Cytoscape in Figure 2C
 
 ### BGCs antismash analysis files
 fasta file of the 70 BGCs mobilized into heterologous hosts and antismash analysis results 
+Antismash 6 analysis results can be dowloaded here : https://www.dropbox.com/s/c75c5rk8nm62bpf/70_documents_from_fasta_antismash_github.zip?dl=0 
 
 ---
 
