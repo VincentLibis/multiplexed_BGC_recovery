@@ -1,6 +1,6 @@
 # multiplexed_BGC_recovery
 
-Scripts (Python Jupyter notebooks) and DNA sequences associated with the 2021 paper on multiplexed mobilization of biosynthetic gene clusters (BGCs).  
+Scripts (Python Jupyter notebooks) and DNA sequences associated with the 2021 paper on multiplexed mobilization of biosynthetic gene clusters.  
 
 ---
 ## List of files:
@@ -32,6 +32,8 @@ input : demultiplexed AD/KS reads from A) genomes B) plate_pools C) well_pools
 5) Annotate nodes with pblast - measure identity to known BGCs ( Extract protein sequences from reference BGCs, blastp translated domains in the graph, annotate graph file)
 
 output : graphml file
+
+
 
 ### nanopore_processing.ipynb
 Performs de-novo assembly of PAC inserts from Nanopore reads. Reads are aligned on 16kbp of pESAC-Apramycin vector sequence using minimap2 with default parameters. Non-aligned reads are kept in full while aligned reads are processed with Jvarkit’s SamExtractClip to recover only their non-aligned regions (i.e. PAC inserts regions clipped by minimap2). Following vector DNA filtering, the reads are assembled using Flye.
