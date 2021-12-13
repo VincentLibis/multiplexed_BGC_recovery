@@ -16,7 +16,7 @@ graphml file visualized with Cytoscape in Figure 2C
 ### BGCs antismash analysis files
 fasta file of the 70 BGCs mobilized into heterologous hosts and antismash analysis results.
 
-Antismash 6 analysis results can be dowloaded here : https://www.dropbox.com/s/c75c5rk8nm62bpf/70_documents_from_fasta_antismash_github.zip?dl=0 
+(Antismash 6 analysis results can be dowloaded here : https://www.dropbox.com/s/c75c5rk8nm62bpf/70_documents_from_fasta_antismash_github.zip?dl=0 )
 
 ---
 
@@ -36,7 +36,6 @@ input : demultiplexed AD/KS reads from A) genomes B) plate_pools C) well_pools
 output : graphml file
 
 
----
 
 ### nanopore_processing.ipynb
 Performs de-novo assembly of PAC inserts from Nanopore reads. Reads are aligned on 16kbp of pESAC-Apramycin vector sequence using minimap2 with default parameters. Non-aligned reads are kept in full while aligned reads are processed with Jvarkit’s SamExtractClip to recover only their non-aligned regions (i.e. PAC inserts regions clipped by minimap2). Following vector DNA filtering, the reads are assembled using Flye.
