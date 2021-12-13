@@ -20,5 +20,9 @@ fasta file of the 70 BGCs mobilized into heterologous hosts and antismash analys
 
 ## Analysis scripts:
 ### CONKAT-seq_PAC_localization.ipynb
+Generates networks of biosynthetic domains and track their physical location in the PAC library
+input : demultiplexed AD/KS reads from 1) genomes 2) plate_pools 3) well_pools
+output : graphml file
 
 ### nanopore_processing.ipynb
+Performs de-novo assembly of PAC inserts from Nanopore reads. Reads are aligned on 16kbp of pESAC-Apramycin vector sequence using minimap2 with default parameters. Non-aligned reads are kept in full while aligned reads are processed with Jvarkit’s SamExtractClip to recover only their non-aligned regions (i.e. PAC inserts regions clipped by minimap2). Following vector DNA filtering, the reads are assembled using Flye.
